@@ -5,21 +5,21 @@
 class GoGallery < Formula
   desc "Generate a photography portfolio website for your photos"
   homepage "https://github.com/creekorful/go-gallery"
-  version "0.13.4"
+  version "0.14.0"
   license "GPL-3.0-only"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/creekorful/go-gallery/releases/download/v0.13.4/go-gallery_0.13.4_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "631072797905d064360fed50973fb4bb59a0b86f036b4ea13be00fa56a859580"
+      url "https://github.com/creekorful/go-gallery/releases/download/v0.14.0/go-gallery_0.14.0_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "5330d2efdc1132ff7cb159d01f46828a026f5eeac88c57d24e06dcfe4d5d04c6"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/creekorful/go-gallery/releases/download/v0.13.4/go-gallery_0.13.4_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "97db44f60f2f55884f3fe6ab1acf0594546789cd99947b82cb2e216d807d6aa5"
+      url "https://github.com/creekorful/go-gallery/releases/download/v0.14.0/go-gallery_0.14.0_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "5f6bde85b24c4dbe557ff172cb58e326c5e8c415a7645a2607a3f37f98ebb39e"
     end
   end
 
