@@ -5,12 +5,12 @@
 class GoGallery < Formula
   desc "Generate a photography portfolio website for your photos"
   homepage "https://github.com/creekorful/go-gallery"
-  version "0.17.0"
+  version "0.17.1"
   license "GPL-3.0-only"
 
   on_macos do
-    url "https://github.com/creekorful/go-gallery/releases/download/v0.17.0/go-gallery_0.17.0_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "a972bbaaf90b483e2009f8dd61053fe347d192a385a626c88b9159922185d0e2"
+    url "https://github.com/creekorful/go-gallery/releases/download/v0.17.1/go-gallery_0.17.1_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "eb37f9add3b008d5f650b6c7f6a5e7aacbfe9cfcaa244465ab646290052972c8"
 
     def install
       bin.install "go-gallery"
@@ -29,8 +29,8 @@ class GoGallery < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/creekorful/go-gallery/releases/download/v0.17.0/go-gallery_0.17.0_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "d596d6ac7a1745d46ce3434cc0a50da294d9e6b16e7b916d28aa12b07abc8fc0"
+      url "https://github.com/creekorful/go-gallery/releases/download/v0.17.1/go-gallery_0.17.1_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "4baf3dd81c138904bab23558ee47ff93e92074b7994b7f6e488b20a30bb4f52b"
 
       def install
         bin.install "go-gallery"
