@@ -5,24 +5,32 @@
 class GoGallery < Formula
   desc "Generate a photography portfolio website for your photos"
   homepage "https://github.com/creekorful/go-gallery"
-  version "0.16.2"
+  version "0.17.0"
   license "GPL-3.0-only"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/creekorful/go-gallery/releases/download/v0.16.2/go-gallery_0.16.2_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "65dee2f54638435bdd7b0cab860a546685915bcc60f67e8ab376a5bd1507b782"
+    url "https://github.com/creekorful/go-gallery/releases/download/v0.17.0/go-gallery_0.17.0_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "a972bbaaf90b483e2009f8dd61053fe347d192a385a626c88b9159922185d0e2"
 
-      def install
-        bin.install "go-gallery"
+    def install
+      bin.install "go-gallery"
+    end
+
+    if Hardware::CPU.arm?
+      def caveats
+        <<~EOS
+          The darwin_arm64 architecture is not supported for the GoGallery
+          formula at this time. The darwin_amd64 binary may work in compatibility
+          mode, but it might not be fully supported.
+        EOS
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/creekorful/go-gallery/releases/download/v0.16.2/go-gallery_0.16.2_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "7351be64ddac48837755075fe3116115119abc72b14fbf45ac2fe0cff28d4895"
+      url "https://github.com/creekorful/go-gallery/releases/download/v0.17.0/go-gallery_0.17.0_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "d596d6ac7a1745d46ce3434cc0a50da294d9e6b16e7b916d28aa12b07abc8fc0"
 
       def install
         bin.install "go-gallery"
